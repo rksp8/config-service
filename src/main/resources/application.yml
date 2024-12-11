@@ -4,9 +4,10 @@ server:
 spring:
   application:
     name: config-service
+  config:
+    import: optional:file:.env[.properties]
   cloud:
     config:
-      import: optional:file:.env[.properties]
       server:
         git:
           clone-on-start: true
