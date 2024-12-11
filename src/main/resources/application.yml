@@ -1,0 +1,17 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      import: optional:file:.env[.properties]
+      server:
+        git:
+          clone-on-start: true
+          uri: https://github.com/rksp8/config.git
+          default-label: master
+          search-paths: '{application}'
+          username: ${GITHUB_USERNAME}
+          password: ${GITHUB_TOKEN}
