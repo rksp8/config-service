@@ -11,7 +11,7 @@ spring:
       server:
         git:
           clone-on-start: true
-          uri: https://github.com/rksp8/config.git
+          uri: ${GITHUB_URL}
           default-label: master
           search-paths: '{application}'
           username: ${GITHUB_USERNAME}
