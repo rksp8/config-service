@@ -4,15 +4,13 @@ server:
 spring:
   application:
     name: config-service
-  config:
-    import: optional:file:.env[.properties]
   cloud:
     config:
       server:
         git:
           clone-on-start: true
-          uri: ${GITHUB_URL}
+          uri: https://github.com/rksp8/config.git
           default-label: master
           search-paths: '{application}'
-          username: ${GITHUB_USERNAME}
-          password: ${GITHUB_TOKEN}
+          username: yofujitsu
+          password: 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
